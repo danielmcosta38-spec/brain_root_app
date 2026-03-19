@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { getTodayStats, getCurrentStreak, getLongestStreak, getWeeklyData, getAllTimeStats } from '@/lib/store'
-import BottomNav from '@/components/BottomNav'
 
 const QUOTES = [
   '"The secret of getting ahead is getting started." — Mark Twain',
@@ -32,7 +31,7 @@ export default function DashboardPage() {
   const maxWeekly = Math.max(...weeklyData.map(d => d.count), 1)
 
   return (
-    <div className="min-h-screen bg-[#F4F5FF] pb-28">
+    <div className="min-h-screen bg-[#F4F5FF] pb-6">
       {/* Header */}
       <div className="bg-white px-5 pt-12 pb-4" style={{ borderBottom: '1px solid #E8EAFF' }}>
         <div className="flex items-center justify-between">
@@ -141,7 +140,6 @@ export default function DashboardPage() {
           <p className="text-sm text-gray-600 italic leading-relaxed text-center">{quote}</p>
         </div>
       </div>
-      <BottomNav />
     </div>
   )
 }

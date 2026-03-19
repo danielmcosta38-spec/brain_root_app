@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import BottomNav from '@/components/BottomNav'
 import HabitCard from '@/components/HabitCard'
 import { HABITS, ALL_CATEGORIES, CATEGORY_LABELS, CATEGORY_EMOJIS, HabitCategory } from '@/lib/habits'
 import { getState, recordHabitCompleted } from '@/lib/store'
@@ -32,7 +31,7 @@ export default function HabitsPage() {
   const todayCount = completedToday.length
 
   return (
-    <div className="min-h-screen bg-[#F4F5FF] pb-28">
+    <div className="min-h-screen bg-[#F4F5FF] pb-6">
       {/* Header */}
       <div className="bg-white px-5 pt-12 pb-4" style={{ borderBottom: '1px solid #E8EAFF' }}>
         <h1 className="text-2xl font-black text-[#0A0B1A] mb-0.5">Habit Library</h1>

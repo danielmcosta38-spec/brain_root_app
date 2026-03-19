@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import BottomNav from '@/components/BottomNav'
 import { getState, recordSeenInsight, getSeenInsightIdsToday, recordImplementedTip, removeImplementedTip, getImplementedTipIds } from '@/lib/store'
 import { getInsightForInterests, LearningInsight } from '@/lib/learning'
 import { SETUP_TIPS, SetupTip, TIP_CATEGORY_LABELS, TIP_CATEGORY_EMOJIS, ALL_TIP_CATEGORIES, TipCategory } from '@/lib/tips'
@@ -83,7 +82,7 @@ export default function DicasPage() {
     : SOCIAL_APPS
 
   return (
-    <div className="min-h-screen bg-[#F4F5FF] pb-28">
+    <div className="min-h-screen bg-[#F4F5FF] pb-6">
       {/* Header */}
       <div className="bg-white px-5 pt-12 pb-4" style={{ borderBottom: '1px solid #E8EAFF' }}>
         <h1 className="text-2xl font-black text-[#0A0B1A] mb-0.5">Tips</h1>
@@ -337,7 +336,6 @@ export default function DicasPage() {
         </div>
       )}
 
-      <BottomNav />
     </div>
   )
 }

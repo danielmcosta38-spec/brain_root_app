@@ -10,7 +10,7 @@ export default function BottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] z-50"
+      className="w-full"
       style={{
         background: 'rgba(244, 245, 255, 0.9)',
         backdropFilter: 'blur(20px)',

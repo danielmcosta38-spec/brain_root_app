@@ -6,7 +6,6 @@ import { SOCIAL_APPS } from '@/lib/apps'
 import { ALL_CATEGORIES, CATEGORY_LABELS, CATEGORY_EMOJIS, HabitCategory } from '@/lib/habits'
 import { INTERESTS, PORTUGUESE_CITIES, Interest } from '@/lib/interests'
 import { getState, saveState, resetState, signOut, LocationData } from '@/lib/store'
-import BottomNav from '@/components/BottomNav'
 
 export default function SettingsPage() {
   const router = useRouter()
@@ -57,7 +56,7 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4F5FF] pb-28">
+    <div className="min-h-screen bg-[#F4F5FF] pb-6">
       {/* Header */}
       <div className="bg-white px-5 pt-12 pb-4" style={{ borderBottom: '1px solid #E8EAFF' }}>
         <div className="flex items-center justify-between">
@@ -231,7 +230,6 @@ export default function SettingsPage() {
           </button>
         </div>
       </div>
-      <BottomNav />
     </div>
   )
 }

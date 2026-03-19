@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import BottomNav from '@/components/BottomNav'
 import HabitCard from '@/components/HabitCard'
 import { getState, getTodayStats, getCurrentStreak, getRecentHabits } from '@/lib/store'
 import { HABITS } from '@/lib/habits'
@@ -28,7 +27,7 @@ export default function HomePage() {
   const recentHabitObjects = recentHabits.map(r => HABITS.find(h => h.id === r.habitId)).filter(Boolean)
 
   return (
-    <div className="min-h-screen bg-[#F4F5FF] pb-28">
+    <div className="min-h-screen bg-[#F4F5FF] pb-6">
       {/* Header */}
       <div className="bg-white px-5 pt-12 pb-5" style={{ borderBottom: '1px solid #E8EAFF' }}>
         <div className="flex items-start justify-between">
@@ -114,7 +113,6 @@ export default function HomePage() {
 
       </div>
 
-      <BottomNav />
     </div>
   )
 }

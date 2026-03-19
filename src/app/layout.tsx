@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import NavWrapper from "@/components/NavWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,6 +27,9 @@ export const metadata: Metadata = {
     title: "BrainBreak",
     statusBarStyle: "default",
   },
+  icons: {
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
@@ -38,8 +42,13 @@ export default function RootLayout({
       <body style={{ fontFamily: "var(--font-inter), sans-serif" }}>
         {/* Mobile wrapper — centered, max 390px */}
         <div style={{ height: "100dvh", display: "flex", justifyContent: "center", background: "#D8DCFF", overflow: "hidden" }}>
-          <div style={{ width: "100%", maxWidth: "390px", height: "100dvh", background: "#FAFAF8", position: "relative", overflowY: "auto", boxShadow: "0 0 40px rgba(0,0,0,0.15)" }}>
-            {children}
+          <div style={{ width: "100%", maxWidth: "390px", height: "100dvh", background: "#FAFAF8", display: "flex", flexDirection: "column", position: "relative", boxShadow: "0 0 40px rgba(0,0,0,0.15)" }}>
+            {/* Scrollable content area */}
+            <div style={{ flex: 1, overflowY: "auto", overflowX: "hidden", WebkitOverflowScrolling: "touch" as const, overscrollBehavior: "none" }}>
+              {children}
+            </div>
+            {/* BottomNav — outside scroll, always anchored to bottom */}
+            <NavWrapper />
           </div>
         </div>
       </body>
