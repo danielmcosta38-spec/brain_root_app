@@ -18,23 +18,7 @@ export default function AppleIcon() {
           overflow: 'hidden',
         }}
       >
-        {/* Subtle highlight orb top-left */}
-        <div
-          style={{
-            position: 'absolute',
-            top: -50,
-            left: -50,
-            width: 200,
-            height: 200,
-            background: 'rgba(255,255,255,0.08)',
-            borderRadius: '50%',
-            display: 'flex',
-          }}
-        />
-        {/* Lightning bolt SVG — no borderRadius, iOS applies its own squircle mask */}
-        <svg width="72" height="90" viewBox="0 0 19 24" fill="none">
-          <path d="M11 0L0 14H7.5L5 24L19 10H11.5L11 0Z" fill="white" />
-        </svg>
+        <span style={{ fontSize: 90, lineHeight: 1 }}>⚡</span>
       </div>
     ),
     { ...size }
