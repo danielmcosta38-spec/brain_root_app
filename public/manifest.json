@@ -1,0 +1,23 @@
+{
+  "name": "BrainBreak",
+  "short_name": "BrainBreak",
+  "description": "Replace mindless scrolling with effortless micro-habits",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAFAF8",
+  "theme_color": "#5C6FF5",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
